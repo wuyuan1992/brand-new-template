@@ -1,14 +1,14 @@
 import React from 'react';
-import { routeAnim } from '../hoc/routAnim';
+import Fade from '../animation/Fade/Fade';
 
 
-function Contact(){
+export default function Contact(){
     return (
-        <p>
-            Contact
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium magnam nulla nemo, soluta aut debitis officiis ut tenetur velit non distinctio consequatur a odit beatae doloribus nobis suscipit laborum sequi.
-        </p>
+        <Fade>
+            <p>
+                Contact
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Accus
+            </p>
+        </Fade>
     )
 }
-
-export default routeAnim(Contact);

@@ -24,7 +24,7 @@ export default class AppRouter extends React.Component{
         return (
             <Router>
                 <Route render={ ({ location }) =>(
-                    <React.Fragment>
+                    <div style={{ position: 'relative' }}>
                         <ul>
                             <li>
                                 <Link to="/">home</Link>
@@ -40,7 +40,7 @@ export default class AppRouter extends React.Component{
                         { routes.map(({ path, Component}) => (
                             <Route key={ path } exact path={ path } component={Component}></Route>
                         )) }
-                    </React.Fragment>
+                    </div>
                 )} />
             </Router>
         )

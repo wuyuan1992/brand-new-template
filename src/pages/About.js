@@ -1,11 +1,14 @@
 import React from 'react';
+import Fade from '../animation/Fade/Fade';
 
 
 export default function About(){
     return (
-        <p>
-            About
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium magnam nulla nemo, soluta aut debitis officiis ut tenetur velit non distinctio consequatur a odit beatae doloribus nobis suscipit laborum sequi.
-        </p>
+        <Fade>
+            <p>
+                About
+                asdeee e e 21312
+            </p>
+        </Fade>
     )
 }
