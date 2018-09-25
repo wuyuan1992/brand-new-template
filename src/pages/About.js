@@ -1,17 +1,18 @@
 import React from 'react';
 import Fade from '../animation/Fade/Fade';
+import Tabs from '../components/Tabs/Tabs';
 
 
 export default function About(props){
     return (
         <Fade {...props}>
-            <h1>About</h1>
-            <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Ullam quisquam consequatur doloremque culpa distinctio laborum reprehenderit
-                voluptate ratione illo assumenda delectus, cum voluptatem officiis hic maxime?
-                Unde incidunt ipsum libero?
-            </p>
+            <Tabs
+                activeIndex = {1}
+                tabs = {[
+                    {title:'tab1', content: <h1>tab1 content</h1> },
+                    {title:'tab2', content: <h1>tab2 content</h1> },
+                ]}
+            />
         </Fade>
     )
 }

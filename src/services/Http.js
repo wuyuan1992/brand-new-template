@@ -115,8 +115,6 @@ export class HttpService {
         if (response.success) {
             resolve(response.data);
         } else {
-            
-
             reject(response.err);
         }
     }

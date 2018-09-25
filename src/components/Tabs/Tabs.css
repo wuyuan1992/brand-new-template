@@ -1,0 +1,58 @@
+.tabs .title{
+    height: 4rem;
+    width: 100%;
+    border-bottom:1px solid #EDEDED;
+    position: relative;
+}
+.tabs .title ul{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.tabs .title ul li{
+    /* width: 4rem; */
+    height: 100%;
+    /* margin-right:1rem; */
+    font-size:1.4rem;
+    flex:1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tabs .title i{
+    content: '';
+    position: absolute;
+    bottom:0;
+    width: 5rem;
+    height: .2rem;
+    background:#347865;
+    transform: translateX(-50%);
+    transition: left .2s ease-in-out;
+}
+
+.tabs .body{
+    height: 10rem;
+    border-bottom:1px solid #EDEDED;
+    width: 100%;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.tabs .body::-webkit-scrollbar{
+    display: none;
+}
+.tabs .body ul{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top:0;
+    transition: left .2s ease-in-out;
+}
+.tabs .body ul li{
+    width: 100%;
+    position: absolute;
+    top:0;
+    bottom:0;
+}
