@@ -2,12 +2,15 @@ import React from 'react';
 import Fade from '../animation/Fade/Fade';
 
 
-export default function About(){
+export default function About(props){
     return (
-        <Fade>
+        <Fade {...props}>
+            <h1>About</h1>
             <p>
-                About
-                asdeee e e 21312
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Ullam quisquam consequatur doloremque culpa distinctio laborum reprehenderit
+                voluptate ratione illo assumenda delectus, cum voluptatem officiis hic maxime?
+                Unde incidunt ipsum libero?
             </p>
         </Fade>
     )

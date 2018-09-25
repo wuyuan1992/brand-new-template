@@ -1,10 +1,10 @@
 import React from 'react'
 import { CSSTransition } from 'react-transition-group'
-import './Fade.css';
+// import './Fade.css';
 
-export default function Fade({children}){
+export default function Fade({children, ...rest}){
     return (
-        <CSSTransition in timeout={300} className="fade" unmountOnExit >
+        <CSSTransition {...rest} timeout={300} classNames="fade" unmountOnExit >
             <div style={{ position:'absolute', left: 15, right: 15  }}>
                 { children }
             </div>
