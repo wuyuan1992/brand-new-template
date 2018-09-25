@@ -1,0 +1,41 @@
+@import './var';
+
+@mixin fontBase($family, $color, $size, $lineHeight, $fontWeight){
+    font-family: $family;
+    color: $color;
+    font-size: $size + rem;
+    line-height: $lineHeight;
+    font-weight: $fontWeight;
+}
+
+// 常用大小； 基本只需要传 color
+@mixin fontGigantic($color, $lineHeigth: 1.15, $fontFamily:$defaultFontFamily, $fontWeight:400){
+    @include fontBase( $fontFamily, $color, 3.6, $lineHeigth, $fontWeight );
+}
+@mixin fontHuge($color, $lineHeigth: 1.15, $fontFamily:$defaultFontFamily, $fontWeight:400){
+    @include fontBase( $fontFamily, $color, 2.0, $lineHeigth, $fontWeight );
+}
+@mixin fontLarge($color, $lineHeigth: 1.15, $fontFamily:$defaultFontFamily, $fontWeight:400){
+    @include fontBase( $fontFamily, $color, 1.8, $lineHeigth, $fontWeight );
+}
+@mixin fontBig($color, $lineHeigth: 1.15, $fontFamily:$defaultFontFamily, $fontWeight:400){
+    @include fontBase( $fontFamily, $color, 1.6, $lineHeigth, $fontWeight );
+}
+@mixin fontMedium($color, $lineHeigth: 1.15, $fontFamily:$defaultFontFamily, $fontWeight:400){
+    @include fontBase( $fontFamily, $color, 1.5, $lineHeigth, $fontWeight );
+}
+@mixin fontNormal($color, $lineHeigth: 1.15, $fontFamily:$defaultFontFamily, $fontWeight:400){
+    @include fontBase( $fontFamily, $color, 1.4, $lineHeigth, $fontWeight );
+}
+@mixin fontSmall($color, $lineHeigth: 1.15, $fontFamily:$defaultFontFamily, $fontWeight:400){
+    @include fontBase( $fontFamily, $color, 1.2, $lineHeigth, $fontWeight );
+}
+@mixin fontTiny($color, $lineHeigth: 1.15, $fontFamily:$defaultFontFamily, $fontWeight:400){
+    @include fontBase( $fontFamily, $color, 1, $lineHeigth, $fontWeight );
+}
+
+// 大小、颜色
+@mixin font($size:1.4, $color:$defaultFontColor, $lineHeigth:1.15, $fontWeight:400, $fontFamily:$defaultFontFamily){
+    @include fontBase( $fontFamily, $color, $size, $lineHeigth, $fontWeight );
+}
+

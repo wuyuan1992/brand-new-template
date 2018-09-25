@@ -4,7 +4,6 @@
 
 import React from 'react'
 import { CSSTransition } from 'react-transition-group'
-// import './Fade.css';
 
 export function routeAnim(WrappedComponent) {
   return class extends React.Component {

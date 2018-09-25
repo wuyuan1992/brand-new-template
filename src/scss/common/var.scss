@@ -1,0 +1,17 @@
+// 图片地址
+$baseUrl:'/assets/imgs/';
+
+// 默认字体
+$defaultFontFamily: 'PingFangSC-Regular';
+$defaultFontColor: #444;
+
+// 页面背景
+$pageBg:#F3F3F3;
+
+// 链接、按钮 / 点击反馈底色
+$link: #3575D3;
+$link-active:lighten($link, 15%);
+$link-disabled:lighten($link, 35%);
+
+// 边框
+$border-gray:#EDEDED;

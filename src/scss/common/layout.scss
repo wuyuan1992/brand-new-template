@@ -1,0 +1,140 @@
+@mixin flex($alignItems, $justifyContent){
+    display: flex;
+    align-items: $alignItems;
+    justify-content: $justifyContent;
+}
+
+/* 上部 */
+@mixin topLeft{
+    @include flex(flex-start, flex-start)
+}
+@mixin topCenter{
+    @include flex(flex-start, center)
+}
+@mixin topRight{
+    @include flex(flex-start, flex-end)
+}
+@mixin topBetween{
+    @include flex(flex-start, space-between)
+}
+@mixin topEvenly{
+    @include flex(flex-start, space-evenly)
+}
+
+/* 中部 */
+
+@mixin middleLeft{
+    @include flex(center, flex-start)
+}
+@mixin middleCenter{
+    @include flex(center, center)
+}
+@mixin middleRight{
+    @include flex(center, flex-end)
+}
+@mixin middleBetween{
+    @include flex(center, space-between)
+}
+@mixin middleEvenly{
+    @include flex(center, space-evenly)
+}
+
+/* 底部 */
+
+@mixin bottomLeft{
+    @include flex(flex-end, flex-start)
+}
+@mixin bottomCenter{
+    @include flex(flex-end, center)
+}
+@mixin bottomRight{
+    @include flex(flex-end, flex-end)
+}
+@mixin bottomBetween{
+    @include flex(flex-end, space-between)
+}
+@mixin bottomEvenly{
+    @include flex(flex-end, space-evenly)
+}
+
+
+
+// 竖直排列
+
+/* 靠左 */
+@mixin leftTop{
+    @include flex(flex-start, flex-start);
+    flex-direction: column;
+}
+@mixin leftMiddle{
+    @include flex(flex-start, center);
+    flex-direction: column;
+}
+@mixin leftBottom{
+    @include flex(flex-start, flex-end);
+    flex-direction: column;
+}
+@mixin leftBetween{
+    @include flex(flex-start, space-between);
+    flex-direction: column;
+}
+@mixin leftEvenly{
+    @include flex(flex-start, space-evenly);
+    flex-direction: column;
+}
+
+/* 居中 */
+
+@mixin centerTop{
+    @include flex(center, flex-start);
+    flex-direction: column;
+}
+@mixin centerMiddle{
+    @include flex(center, center);
+    flex-direction: column;
+}
+@mixin centerBottom{
+    @include flex(center, flex-end);
+    flex-direction: column;
+}
+@mixin centerBetween{
+    @include flex(center, space-between);
+    flex-direction: column;
+}
+@mixin centerEvenly{
+    @include flex(center, space-evenly);
+    flex-direction: column;
+}
+
+/* 底部 */
+
+@mixin rightTop{
+    @include flex(flex-end, flex-start);
+    flex-direction: column;
+}
+@mixin rightMiddle{
+    @include flex(flex-end, center);
+    flex-direction: column;
+}
+@mixin rightBottom{
+    @include flex(flex-end, flex-end);
+    flex-direction: column;
+}
+@mixin rightBetween{
+    @include flex(flex-end, space-between);
+    flex-direction: column;
+}
+@mixin rightEvenly{
+    @include flex(flex-end, space-evenly);
+    flex-direction: column;
+}
+
+
+// 铺满
+@mixin cover{
+    position: absolute;
+    top:0;
+    bottom:0;
+    right: 0;
+    left: 0;
+}
