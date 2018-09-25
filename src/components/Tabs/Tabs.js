@@ -1,6 +1,6 @@
 import React from 'react';
 import './Tabs.scss';
-import Swipe from '../Swipe/Swipe';
+import { Swipe } from '../';
 
 export default class Tabs extends React.Component{
     constructor(props){

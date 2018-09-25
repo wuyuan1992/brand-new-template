@@ -1,11 +1,11 @@
 import React from 'react';
-import Fade from '../animation/Fade/Fade';
-import Tabs from '../components/Tabs/Tabs';
+
+import { Anim, Tabs } from '../components';
 
 
 export default function About(props){
     return (
-        <Fade {...props}>
+        <Anim {...props}>
             <Tabs
                 activeIndex = {1}
                 tabs = {[
@@ -13,6 +13,6 @@ export default function About(props){
                     {title:'tab2', content: <h1>tab2 content</h1> },
                 ]}
             />
-        </Fade>
+        </Anim>
     )
 }

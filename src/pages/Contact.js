@@ -1,10 +1,10 @@
 import React from 'react';
-import Fade from '../animation/Fade/Fade';
 
+import { Anim } from '../components';
 
 export default function Contact(props){
     return (
-        <Fade {...props}>
+        <Anim {...props}>
             <h1>Contact</h1>
             <p>
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit.
@@ -12,6 +12,6 @@ export default function Contact(props){
                 voluptate ratione illo assumenda delectus, cum voluptatem officiis hic maxime?
                 Unde incidunt ipsum libero?
             </p>
-        </Fade>
+        </Anim>
     )
 }
