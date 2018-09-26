@@ -15,3 +15,10 @@ $link-disabled:lighten($link, 35%);
 
 // 边框
 $border-gray:#EDEDED;
+
+// 蒙层背景色
+$mask: rgba(0,0,0,.5);
+$modalZIndex: 3000;
+
+$appRootZIndex: 10;
+$modalRootZIndex: 1;

@@ -1,0 +1,8 @@
+@import 'src/scss/index';
+
+.toast{
+    @include cover;
+    @include middleCenter;
+    background: $mask;
+    z-index: $modalZIndex;
+}

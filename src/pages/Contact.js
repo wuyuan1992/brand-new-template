@@ -1,6 +1,5 @@
 import React from 'react';
-import Fade from '../animation/Fade/Fade';
-
+import { Fade } from '../components';
 
 export default function Contact(props){
     return (

@@ -1,6 +1,5 @@
 import React from 'react';
-import Fade from '../animation/Fade/Fade';
-import Tabs from '../components/Tabs/Tabs';
+import { Fade, Tabs } from '../components';
 
 
 export default function About(props){
