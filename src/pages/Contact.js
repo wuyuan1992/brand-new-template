@@ -1,10 +1,9 @@
 import React from 'react';
-
-import { Anim, ProgressLine } from '../components';
+import { Fade, ProgressLine } from '../components';
 
 export default function Contact(props){
     return (
-        <Anim {...props}>
+        <Fade {...props}>
             <h1>Contact</h1>
             
             <ProgressLine
@@ -24,6 +23,6 @@ export default function Contact(props){
                     }
                 ]}
             />
-        </Anim>
+        </Fade>
     )
 }
