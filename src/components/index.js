@@ -1,23 +1,15 @@
-import Fade from './Anim/Fade';
-import Swipe from './Swipe';
-import Tabs from './Tabs/Tabs';
+export {default as Fade} from './Anim/Fade';
+export {default as Swipe} from './Swipe';
+export {default as Tabs} from './Tabs/Tabs';
 
 
 
-import Mask from './Mask';
-import Modal from './Modal/Modal';
-import Toast from './Toast/Toast';
-import Picker from './Picker/Picker';
+export {default as Mask} from './Mask';
+export {default as Modal} from './Modal/Modal';
+export {default as Toast} from './Toast/Toast';
+export {default as Picker} from './Picker/Picker';
 
-import ProgressLine from './ProgressLine/ProgressLine';
+export {default as ProgressLine} from './ProgressLine/ProgressLine';
 
-export {
-    Fade,
-    Swipe,
-    Tabs,
-    Mask,
-    Modal,
-    Toast,
-    Picker,
-    ProgressLine
-}
+
+export { default as ImageUploader } from './ImageUploader/ImageUploader';

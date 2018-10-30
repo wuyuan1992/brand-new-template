@@ -1,20 +1,55 @@
 import React from 'react';
 import { Fade, Modal, Toast, Picker } from '../components';
+import { List } from 'immutable';
+import PropTypes from 'prop-types';
 
-export default class Home extends React.Component{
+class Home extends React.Component{
     constructor(props){
         super(props);
         this.state = {
             showModal : false,
             showToast : false,
             showPicker : false,
-        }
+
+            list: List([
+                {
+                    name: 'elon',
+                    age: 26
+                },
+                {
+                    name: 'elon',
+                    age: 26
+                },
+                {
+                    name: 'elon',
+                    age: 26
+                }
+            ])
+        };
+
+        this.updateList = this.updateList.bind(this);
+    }
+    updateList(){
+        const list = this.state.list.map(({name, age}) => ({ name, age: age+1 }));
+        this.setState({list});
     }
 
     render(){
+        const { list } = this.state;
+        console.log(list);
+        console.log(this.props);
+
         return (
             <Fade {...this.props} >
                 <h1>Home</h1>
+
+                <ul onClick={ this.updateList }>
+                    {
+                        this.state.list.map((el, index) => (
+                            <li key={`li-${index}`}>{el.name}: {el.age}</li>
+                        ))
+                    }
+                </ul>
                 <button
                     onClick={()=>{ this.setState({ showModal: true }) }}
                 > show Modal </button>
@@ -56,3 +91,12 @@ export default class Home extends React.Component{
         )
     }
 }
+
+Home.propTypes = {
+    showModal: PropTypes.bool,
+    showToast: PropTypes.bool,
+    showPicker: PropTypes.bool,
+    list: PropTypes.object
+}
+
+export default Home;

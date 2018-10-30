@@ -57,7 +57,7 @@ export default class AppRouter extends React.Component{
                         <div className="route" style={{ position: 'relative' }}>
                             { routes.map(({ path, Component}) => (
                                 <Route key={ path } exact path={ path }>
-                                    {({match})=> <Component in={match!==null} />}
+                                    {({match})=> <Component in={ match!==null } />}
                                 </Route>
                             )) }
                         </div>

@@ -5,4 +5,13 @@
     @include middleCenter;
     background: $mask;
     z-index: $modalZIndex;
+
+    .toast-content{
+        max-width: 90%;
+        margin:0 auto;
+        @include middleCenter;
+        padding:1.6rem;
+        background:#FFF;
+        @include fontNormal(#444);
+    }
 }

@@ -8,6 +8,9 @@ export default class Toast extends React.Component{
     constructor(props){
         super(props);
         this.timer = null;
+        this.state={
+            autoDismissTime: 15000
+        }
     }
 
     componentDidMount(){
@@ -23,7 +26,7 @@ export default class Toast extends React.Component{
     autoDismiss(){
         this.timer = setTimeout(()=>{
             this.props.onDismiss();
-        }, this.props.timeout || 2000)
+        }, this.props.timeout || this.state.autoDismissTime)
     }
 
     componentWillUnmount(){
@@ -33,8 +36,7 @@ export default class Toast extends React.Component{
 
     render(){
         const { show , children } = this.props;
-
-        console.log(show);
+        
 
         return conditionShow(show, (
                 <Mask>

@@ -1,28 +1,33 @@
 import React from 'react';
-import { Fade, ProgressLine } from '../components';
+import { Fade, ImageUploader } from '../components';
 
-export default function Contact(props){
-    return (
-        <Fade {...props}>
+class Contact extends React.Component{
+
+    constructor(){
+        super();
+
+        this.state = {
+
+        };
+
+        this.uploaderChanged = this.uploaderChanged.bind(this);
+    }
+
+    uploaderChanged(file, result){
+        console.log(file);
+    }
+
+
+    render(){
+        const {preview} = this.state;
+        return (
+            <Fade {...this.props}>
             <h1>Contact</h1>
-            
-            <ProgressLine
-                currentStep = { 1 }
-                progress = {[
-                    {
-                        step: 1,
-                        txt:'提交订单'
-                    },
-                    {
-                        step: 2,
-                        txt:'审核订单'
-                    },
-                    {
-                        step: 3,
-                        txt:'完成订单'
-                    }
-                ]}
-            />
+
+            <ImageUploader onChange={ this.uploaderChanged }/>
         </Fade>
     )
+    }
 }
+
+export default Contact;
